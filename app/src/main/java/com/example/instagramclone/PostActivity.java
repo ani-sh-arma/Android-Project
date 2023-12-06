@@ -166,8 +166,8 @@ public class PostActivity extends AppCompatActivity {
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference("posts");
 
 
-                    String downloadUrl = uri.toString();
-                    String postId = ref.push().getKey();
+                    String downloadUrl = uri;
+                    String postId = ref.push();
 
                     postItem = new Post();
                     postItem.setImageUrl(downloadUrl);
